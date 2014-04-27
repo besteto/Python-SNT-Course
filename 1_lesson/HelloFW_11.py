@@ -1,8 +1,8 @@
 def HelloFW():
 	print "Hello, fucking world!"
 	
-helloFW()
-result = helloFW()
+HelloFW()
+result = HelloFW()
 print result
-helloFW("no need parameter")
+#HelloFW("no need parameter")
 	
