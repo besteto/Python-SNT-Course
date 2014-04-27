@@ -1,0 +1,11 @@
+Библиотеки и модули. Почитать: 
+http://www.tutorialspoint.com/python/python_command_line_arguments.htm  
+https://docs.python.org/2/tutorial/modules.html  
+http://diseaz.github.io/gitmagic/book.html  
+
+Методы:
+1. Приветствие: Hello.py -> Hello, fucking world
+2. Приветствие по имени: Greet("name") 
+3. Два имени
+
+Тестовая программка - импортировать все методы, вызвать друг за другом
