@@ -10,3 +10,8 @@ def checkStr(param):
 		if everLetter not in string.printable:
 			isStr = False
 	return isStr
+
+
+	# def checkStr(param) :
+	#    return isinstance(param, basestring) 
+	#
