@@ -7,25 +7,18 @@ python main.py "to be, or not to be: that is the question"
 > ot eb, ro ton ot eb: taht si eht noitseuq
 """
 
-
-
 import sys
+import re
+from check_param import checkStr 
 
-import check_param
-import split
-import reverse
+if len(sys.argv) == 2:
+	ourStr = sys.argv[1]
 
-print 'Number of arguments:', len(sys.argv), 'arguments.'
-print 'Argument List:', str(sys.argv)
+	if checkStr(ourStr):
+		ourStr = ''.join(w[::-1] for w in re.split('(\W+)',ourStr))
+		print ourStr
 
-#ourStr = ""sys.argv[1]""
-ourStr = "to be, or not to be: that is the question"
-checkStr(ourStr)
-startIndex = 0
-endIndex = 0
-for endIndex in len(ourStr):
-	endIndex = splitStr(ourStr, startIndex)
-	ouStr[startIndex:endIndex] = reverseStr(ourStr[startIndex:endIndex])
-	startIndex = endIndex
-
-print ouStr
+	else:
+		print "Not a string"
+else:
+	print "invalid argument number"
