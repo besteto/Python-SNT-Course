@@ -4,3 +4,6 @@
 
 def reverseStr(param):
 	return ''.join(reversed(param))
+
+
+# зачем нам это модуль, если мы его не зовем?
