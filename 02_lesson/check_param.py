@@ -5,13 +5,4 @@
 import string
 
 def checkStr(param):
-	isStr = True
-	for everLetter in param:
-		if everLetter not in string.printable:
-			isStr = False
-	return isStr
-
-
-	# def checkStr(param) :
-	#    return isinstance(param, basestring) 
-	#
+	return isinstance(param, basestring)
