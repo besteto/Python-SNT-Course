@@ -15,7 +15,7 @@ if len(sys.argv) == 2:
 	ourStr = sys.argv[1]
 
 	if checkStr(ourStr):
-		ourStr = ''.join(w[::-1] for w in re.split('(\W+)',ourStr))
+		ourStr = ''.join(w[::-1] for w in re.split('(\W+?)',ourStr))
 		print ourStr
 
 	else:
