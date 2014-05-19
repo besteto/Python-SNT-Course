@@ -16,9 +16,11 @@ class Implant:
     def get_params(self):
         return self.implantParams
 
- #   def create_by_name(self):
+    def create_by_name(self):
+        pass
 
- #   def create_by_params(self):
+    def create_by_params(self):
+        pass
 
     def create_by_random(self):
         self.implantName = random.choice(list(wordAdj.keys())) + " " + random.choice(list(wordNoun.keys())) + " " + random.choice(list(wordAddNoun.keys()))
@@ -26,5 +28,4 @@ class Implant:
 
 with open("ImplantNames.txt", "w") as fileWithNames:
     for i in range(1, 100):
-        newImplant = Implant()
-        fileWithNames.write(newImplant.create_by_random().get_name() + "\n")
+        fileWithNames.write(Implant().create_by_random().get_name() + "\n")
