@@ -22,9 +22,9 @@ class Implant:
 
     def create_by_random(self):
         self.implantName = random.choice(list(wordAdj.keys())) + " " + random.choice(list(wordNoun.keys())) + " " + random.choice(list(wordAddNoun.keys()))
-        return self.implantName
+        return self
 
 with open("ImplantNames.txt", "w") as fileWithNames:
     for i in range(1, 100):
         newImplant = Implant()
-        fileWithNames.write(newImplant.create_by_random() + "\n")
+        fileWithNames.write(newImplant.create_by_random().get_name() + "\n")
