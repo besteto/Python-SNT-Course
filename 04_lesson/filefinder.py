@@ -19,3 +19,9 @@ def filefinder():
                 for every in listExtensions:
                     if fnmatch.fnmatch(nameFile, every):
                         listFiles.write(os.path.join(root, nameFile) + "\n")
+
+
+
+#todo:
+# filefinder(dir, ext)
+# вызов - в main, там же - разбор параметров
