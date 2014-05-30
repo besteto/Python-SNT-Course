@@ -11,13 +11,11 @@ def filefinder():
     options = parser.parse_args()
     listExtensions = [word.strip(" ") for word in options.extensions.split(",")]
 
-    for root, dirs, files in os.walk(options.directory):
-        for nameFile in files:
-            for every in listExtensions:
-                if fnmatch.fnmatch(nameFile, every):
-                    print (os.path.join(root, nameFile))
-
-    print("path is " + str(options.directory))
-    print("ext is " + str(listExtensions))
-
-filefinder()
+    with open("files_list.txt", "w") as listFiles:
+        listFiles.write("path is " + str(options.directory) + "\n")
+        listFiles.write("ext is " + str(listExtensions) + "\n")
+        for root, dirs, files in os.walk(options.directory):
+            for nameFile in files:
+                for every in listExtensions:
+                    if fnmatch.fnmatch(nameFile, every):
+                        listFiles.write(os.path.join(root, nameFile) + "\n")
