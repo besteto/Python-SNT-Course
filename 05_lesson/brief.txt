@@ -1,0 +1,11 @@
+подготовка к 3d курсу
+математика своими руками:
+1. структуры-типы - vec3, vec4
+2. операции
+    V * a = float
+    V / a = float
+    V1 + V2 = V3
+    V1 - V2 = V3
+    V1 dot V2
+    V.normalize = Vn
+    V.length = float
