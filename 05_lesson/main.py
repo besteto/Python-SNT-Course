@@ -1,23 +1,5 @@
 from vector import  *
-
-__tests = 0
-__fails = 0
-
-def __tests__(): return __tests
-def __fails__(): return __fails
-
-def __ok__(test, expect=True, message=''):
-    global __tests
-    global __fails
-    __tests += 1
-    if message: message = ' (%s)' % message
-    if (test != expect):
-        __fails += 1
-        print "Test %d%s: [FAIL] expected %s but got %s" % \
-              (__tests, message, repr(expect), repr(test))
-    else:
-        print "Test %d%s: [OK] %s" % \
-              (__tests, message, repr(expect))
+from testing import *
 
 print 'Testing V vector class...'
 

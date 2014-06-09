@@ -2,8 +2,6 @@ import math
 import random
 
 EPSILON = 0.00000001
-
-def zero(a): return abs(a) < EPSILON
 def equal(a, b): return abs(a - b) < EPSILON
 
 class V:
